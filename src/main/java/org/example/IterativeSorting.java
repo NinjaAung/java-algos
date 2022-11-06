@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.List;
 
-public class Exercises {
+public class IterativeSorting {
 
     /*
      * given an array of Integers, return a boolean if the array is in sorted order
