@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class IterativeSortingTest {
+public class IterativeSortingTest {
 
     IterativeSorting iterativeSorting = new IterativeSorting();
 
