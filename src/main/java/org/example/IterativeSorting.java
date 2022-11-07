@@ -7,12 +7,17 @@ public class IterativeSorting {
     /*
      * given an array of Integers, return a boolean if the array is in sorted order
      * isSorted([1,2,3,4]) -> true
-     * isSorted([4,1,2,3]) -> true
+     * isSorted([4,1,2,3]) -> false
      * Running time: ???
      * Memory Usage: ???
      */
     public boolean isSorted(List<Integer> numbers) {
-        return false;
+        for (int i = 1; i < numbers.size(); i++) {
+            if (numbers.get(i - 1) > numbers.get(i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /*
