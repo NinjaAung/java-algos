@@ -43,9 +43,20 @@ public class IterativeSortingTest {
         Integer[] test2 = testArray(20, 1, 50);
         Integer[] test3 = testArray(30, 1, 100);
 
-        compareArrayLists(Arrays.asList(test1.clone()), iterativeSorting.bubbleSort(Arrays.asList(test1)));
-        compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.bubbleSort(Arrays.asList(test2)));
-        compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.bubbleSort(Arrays.asList(test3)));
+        String failure = compareArrayLists(Arrays.asList(test1.clone()),
+                iterativeSorting.bubbleSort(Arrays.asList(test1)));
+        if (failure != null) {
+            fail(failure);
+        }
+        failure = compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.bubbleSort(Arrays.asList(test2)));
+        if (failure != null) {
+            fail(failure);
+        }
+
+        failure = compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.bubbleSort(Arrays.asList(test3)));
+        if (failure != null) {
+            fail(failure);
+        }
     }
 
     @Test
@@ -54,10 +65,19 @@ public class IterativeSortingTest {
         Integer[] test2 = testArray(20, 1, 50);
         Integer[] test3 = testArray(30, 1, 100);
 
-        compareArrayLists(Arrays.asList(test1.clone()), iterativeSorting.selectionSort(Arrays.asList(test1)));
-        compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.selectionSort(Arrays.asList(test2)));
-        compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.selectionSort(Arrays.asList(test3)));
-
+        String failure = compareArrayLists(Arrays.asList(test1.clone()),
+                iterativeSorting.selectionSort(Arrays.asList(test1)));
+        if (failure != null) {
+            fail(failure);
+        }
+        failure = compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.selectionSort(Arrays.asList(test2)));
+        if (failure != null) {
+            fail(failure);
+        }
+        failure = compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.selectionSort(Arrays.asList(test3)));
+        if (failure != null) {
+            fail(failure);
+        }
     }
 
     @Test
@@ -66,9 +86,20 @@ public class IterativeSortingTest {
         Integer[] test2 = testArray(20, 1, 50);
         Integer[] test3 = testArray(30, 1, 100);
 
-        compareArrayLists(Arrays.asList(test1.clone()), iterativeSorting.insertionSort(Arrays.asList(test1)));
-        compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.insertionSort(Arrays.asList(test2)));
-        compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.insertionSort(Arrays.asList(test3)));
+        String failure = compareArrayLists(Arrays.asList(test1.clone()),
+                iterativeSorting.insertionSort(Arrays.asList(test1)));
+        if (failure != null) {
+            fail(failure);
+        }
+
+        failure = compareArrayLists(Arrays.asList(test2.clone()), iterativeSorting.insertionSort(Arrays.asList(test2)));
+        if (failure != null) {
+            fail(failure);
+        }
+        failure = compareArrayLists(Arrays.asList(test3.clone()), iterativeSorting.insertionSort(Arrays.asList(test3)));
+        if (failure != null) {
+            fail(failure);
+        }
     }
 
     private Integer[] testArray(int size, int min, int max) {
